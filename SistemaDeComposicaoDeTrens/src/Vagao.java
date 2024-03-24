@@ -3,9 +3,9 @@ public class Vagao{
     private Trem trem;
     private int capacidadeCarga;
 
-    public Vagao(int id, Trem trem, int capacidadeCarga) {
+    public Vagao(int id, int capacidadeCarga) {
         this.id = id;
-        this.trem = trem;
+        this.trem = null;
         this.capacidadeCarga = capacidadeCarga;
     }
 
@@ -15,6 +15,14 @@ public class Vagao{
 
     public Trem getTrem() {
         return trem;
+    }
+
+    public void vincula(Trem t){
+        trem = t;
+    }
+
+    public void desvincula(){
+        trem = null;
     }
 
     public int getCapacidadeCarga() {

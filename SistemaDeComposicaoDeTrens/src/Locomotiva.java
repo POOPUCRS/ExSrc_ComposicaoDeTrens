@@ -4,9 +4,9 @@ public class Locomotiva {
     private int capacidadeCarga;
     private int nroMaxVagoes;
 
-    public Locomotiva(int id, Trem trem, int capacidadeCarga, int nroMaxVagoes) {
+    public Locomotiva(int id, int capacidadeCarga, int nroMaxVagoes) {
         this.id = id;
-        this.trem = trem;
+        this.trem = null;
         this.capacidadeCarga = capacidadeCarga;
         this.nroMaxVagoes = nroMaxVagoes;
     }
@@ -17,6 +17,14 @@ public class Locomotiva {
 
     public Trem getTrem() {
         return trem;
+    }
+
+    public void vincula(Trem t){
+        trem = t;
+    }
+
+    public void desvincula(){
+        trem = null;
     }
 
     public int getCapacidadeCarga() {
